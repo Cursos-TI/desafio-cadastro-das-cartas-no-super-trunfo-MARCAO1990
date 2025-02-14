@@ -1,0 +1,64 @@
+#include <stdio.h>
+
+// Definindo a estrutura para armazenar as informações de cada cidade
+struct Cidade {
+    char nome[50];
+    int populacao;
+    float area;
+    float pib;
+    float densidade_populacional;
+    float pib_per_capita;
+};
+
+// Função para calcular a densidade populacional e o PIB per capita
+void calcular_propriedades(struct Cidade *cidade) {
+    cidade->densidade_populacional = cidade->populacao / cidade->area;
+    cidade->pib_per_capita = cidade->pib / cidade->populacao;
+}
+
+// Função para exibir as informações de uma cidade
+void exibir_informacoes(struct Cidade cidade) {
+    printf("\nCidade: %s\n", cidade.nome);
+    printf("População: %d\n", cidade.populacao);
+    printf("Área: %.2f km²\n", cidade.area);
+    printf("PIB Total: R$ %.2f\n", cidade.pib);
+    printf("Densidade Populacional: %.2f habitantes por km²\n", cidade.densidade_populacional);
+    printf("PIB per Capita: R$ %.2f\n", cidade.pib_per_capita);
+}
+
+int main() {
+    struct Cidade cidade;
+    int continuar = 1;
+
+    while (continuar) {
+        // Coletando os dados da cidade
+        printf("Digite o nome da cidade: ");
+        fgets(cidade.nome, sizeof(cidade.nome), stdin);  // Usando fgets para permitir espaços no nome
+
+        printf("Digite a população da cidade: ");
+        scanf("%d", &cidade.populacao);
+
+        printf("Digite a área da cidade em km²: ");
+        scanf("%f", &cidade.area);
+
+        printf("Digite o PIB total da cidade (em R$): ");
+        scanf("%f", &cidade.pib);
+
+        // Calculando as novas propriedades
+        calcular_propriedades(&cidade);
+
+        // Exibindo as informações calculadas
+        exibir_informacoes(cidade);
+
+        // Perguntando se o usuário deseja continuar
+        printf("\nDeseja inserir dados para outra cidade? (1 - Sim / 0 - Não): ");
+        scanf("%d", &continuar);
+
+        // Limpar o buffer de entrada para evitar problemas com fgets
+        getchar();  // Para consumir o '\n' deixado pelo scanf
+    }
+
+    printf("Programa encerrado.\n");
+
+    return 0;
+}
