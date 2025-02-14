@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+
+
 // Definindo a estrutura para armazenar as informações de cada cidade
 struct Cidade {
     char nome[50];
