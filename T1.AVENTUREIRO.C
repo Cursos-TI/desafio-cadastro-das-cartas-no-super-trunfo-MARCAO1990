@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    // Variáveis para armazenar os dados das cartas
+    // Variáveis 
     char estado1, estado2;
     char codigo1[5], codigo2[5];
     char nomeCidade1[50], nomeCidade2[50];
@@ -10,11 +10,12 @@ int main() {
     float pib1, pib2;
     int pontosTuristicos1, pontosTuristicos2;
 
-    // Variáveis para armazenar a densidade populacional e PIB per capita
+    // Variáveis - densidade populacional e PIB per capita
     float densidadePopulacional1, densidadePopulacional2;
     float pibPerCapita1, pibPerCapita2;
 
-    // Leitura dos dados para a carta 1
+    //Dados para a carta 1
+    printf("NIVEL AVENTUREIRO SUPER TRUNFO \n");
     printf("Digite os dados para a Carta 1:\n");
     printf("Estado (A a H): ");
     scanf(" %c", &estado1);
@@ -35,7 +36,7 @@ int main() {
     densidadePopulacional1 = populacao1 / area1;
     pibPerCapita1 = pib1 * 1e9 / populacao1;  // PIB em bilhões, então multiplicamos por 1e9 para converter para reais
 
-    // Leitura dos dados para a carta 2
+    //Dados para a carta 2
     printf("\nDigite os dados para a Carta 2:\n");
     printf("Estado (A a H): ");
     scanf(" %c", &estado2);
@@ -56,7 +57,7 @@ int main() {
     densidadePopulacional2 = populacao2 / area2;
     pibPerCapita2 = pib2 * 1e9 / populacao2;  // PIB em bilhões, então multiplicamos por 1e9 para converter para reais
 
-    // Exibição das informações da Carta 1
+    //Informações da Carta 1
     printf("\nCarta 1:\n");
     printf("Estado: %c\n", estado1);
     printf("Código: %s\n", codigo1);
@@ -68,7 +69,7 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional1);
     printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
 
-    // Exibição das informações da Carta 2
+    //Informações da Carta 2
     printf("\nCarta 2:\n");
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
