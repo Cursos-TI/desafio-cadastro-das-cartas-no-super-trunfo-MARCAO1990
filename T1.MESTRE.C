@@ -1,21 +1,22 @@
 #include <stdio.h>
 
 int main() {
-    // Variáveis para armazenar os dados das cartas
+    // Variáveis
     char estado1, estado2;
     char codigo1[5], codigo2[5];
     char nomeCidade1[50], nomeCidade2[50];
-    unsigned long int populacao1, populacao2;  // Alterado para unsigned long int
+    unsigned long int populacao1, populacao2;  
     float area1, area2;
     float pib1, pib2;
     int pontosTuristicos1, pontosTuristicos2;
 
-    // Variáveis para armazenar a densidade populacional e PIB per capita
+    // Variáveis - densidade populacional e PIB per capita
     float densidadePopulacional1, densidadePopulacional2;
     float pibPerCapita1, pibPerCapita2;
     float superPoder1, superPoder2;
 
-    // Leitura dos dados para a carta 1
+    // Dados para a carta 1
+    printf("NIVEL MESTRE SUPER TRUNFO \n");
     printf("Digite os dados para a Carta 1:\n");
     printf("Estado (A a H): ");
     scanf(" %c", &estado1);
@@ -24,7 +25,7 @@ int main() {
     printf("Nome da Cidade: ");
     scanf(" %[^\n]", nomeCidade1);
     printf("População: ");
-    scanf("%lu", &populacao1);  // Alterado para ler como unsigned long int
+    scanf("%lu", &populacao1);  
     printf("Área (em km²): ");
     scanf("%f", &area1);
     printf("PIB (em bilhões de reais): ");
@@ -36,7 +37,7 @@ int main() {
     densidadePopulacional1 = (float)populacao1 / area1;
     pibPerCapita1 = pib1 * 1e9 / populacao1;  // PIB em bilhões, então multiplicamos por 1e9 para converter para reais
 
-    // Leitura dos dados para a carta 2
+    //Dados para a carta 2
     printf("\nDigite os dados para a Carta 2:\n");
     printf("Estado (A a H): ");
     scanf(" %c", &estado2);
@@ -45,7 +46,7 @@ int main() {
     printf("Nome da Cidade: ");
     scanf(" %[^\n]", nomeCidade2);
     printf("População: ");
-    scanf("%lu", &populacao2);  // Alterado para ler como unsigned long int
+    scanf("%lu", &populacao2);  
     printf("Área (em km²): ");
     scanf("%f", &area2);
     printf("PIB (em bilhões de reais): ");
@@ -61,7 +62,7 @@ int main() {
     superPoder1 = (float)populacao1 + area1 + pib1 * 1e9 + pontosTuristicos1 + pibPerCapita1 + (1 / densidadePopulacional1);
     superPoder2 = (float)populacao2 + area2 + pib2 * 1e9 + pontosTuristicos2 + pibPerCapita2 + (1 / densidadePopulacional2);
 
-    // Exibição das informações da Carta 1
+    //Informações da Carta 1
     printf("\nCarta 1:\n");
     printf("Estado: %c\n", estado1);
     printf("Código: %s\n", codigo1);
@@ -74,7 +75,7 @@ int main() {
     printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
     printf("Super Poder: %.2f\n", superPoder1);
 
-    // Exibição das informações da Carta 2
+    //Informações da Carta 2
     printf("\nCarta 2:\n");
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
