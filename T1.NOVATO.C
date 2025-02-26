@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    // Variáveis para armazenar os dados das cartas
+
     char estado1, estado2;
     char codigo1[5], codigo2[5];
     char nomeCidade1[50], nomeCidade2[50];
@@ -9,8 +9,9 @@ int main() {
     float area1, area2;
     float pib1, pib2;
     int pontosTuristicos1, pontosTuristicos2;
-
-    // Leitura dos dados para a carta 1
+    
+    // Dados para a carta 1
+    printf("NIVEL NOVATO SUPER TRUNFO \n");
     printf("Digite os dados para a Carta 1:\n");
     printf("Estado (A a H): ");
     scanf(" %c", &estado1);
@@ -27,7 +28,7 @@ int main() {
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos1);
 
-    // Leitura dos dados para a carta 2
+    //Dados para a carta 2
     printf("\nDigite os dados para a Carta 2:\n");
     printf("Estado (A a H): ");
     scanf(" %c", &estado2);
@@ -44,7 +45,7 @@ int main() {
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos2);
 
-    // Exibição das informações da Carta 1
+    //Informações da Carta 1
     printf("\nCarta 1:\n");
     printf("Estado: %c\n", estado1);
     printf("Código: %s\n", codigo1);
@@ -54,7 +55,7 @@ int main() {
     printf("PIB: %.2f bilhões de reais\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
 
-    // Exibição das informações da Carta 2
+     //Informações da Carta 2
     printf("\nCarta 2:\n");
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
